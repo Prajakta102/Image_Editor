@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>image editor using JS</h2>
+        </div>
+        <div class="image-box">
+            <img src="" alt="" srcset="" id="img-src">
+        </div>
+        <input type="file" name="" id="default-btn" hidden>
+        <button onclick="default_btn_active()" class="btns" id="choose-file">choose file</button>
+        <div class="filters">
+            <h4>filters / effects</h4>
+            <hr>
+            <div class="filter">
+                <table>
+                    <tr class="row">
+                        <td>
+                            <label>Blur</label>
+                            <br>
+                            <input type="range" min="1" max="20" value="0" onchange="apply_filter()"
+                            data-filter="blur" data-scale="px" class="input">
+                        </td>
+                        <td>
+                            <label>Brightness</label>
+                            <br>
+                            <input type="range" min="0" max="200" value="100"
+                            onchange="apply_filter()"
+                                data-filter="brightness" data-scale="%" class="input">
+                        </td>
+                        <td>
+                            <label>Contrast</label>
+                            <br>
+                            <input type="range" min="0" max="200" value="100" onchange="apply_filter()"
+                                data-filter="contrast" data-scale="%" class="right">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Gray-scale</label>
+                            <br>
+                            <input type="range" min="0" max="100" value="0" onchange="apply_filter()"
+                                data-filter="grayscale" data-scale="%" class="input">
+                        </td>
+                        <td>
+                            <label>Hue-rotate</label>
+                            <br>
+                            <input type="range" min="0" max="360" value="0" onchange="apply_filter()"
+                                data-filter="hue-rotate" data-scale="deg" class="input">
+
+                        </td>
+                        <td>
+                            <label>Invert</label>
+                            <br>
+                            <input type="range" min="0" max="100" value="0" onchange="apply_filter()"
+                                data-filter="invert" data-scale="%" class="right" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Opacity</label>
+                            <br>
+                            <input type="range" min="0" max="100" value="100" onchange="apply_filter()"
+                                data-filter="opacity" data-scale="%" class="input" >
+                        </td>
+                        <td>
+                            <label>Saturate</label>
+                            <br>
+                            <input type="range" min="1" max="100" value="1" onchange="apply_filter()"
+                                data-filter="saturate" data-scale=" " class="input">
+                        </td>
+                        <td>
+                            <label>Sepia</label>
+                            <br>
+                            <input type="range" min="0" max="100" value="0" onchange="apply_filter()"
+                                data-filter="sepia" data-scale="%" class="right">
+                        </td>
+                    </tr>
+                    
+                </table>
+
+
+
+            </div>
+
+
+        </div>
+        
+        <!-- <div class="buttons">
+            <button class="btn" id="download">
+                download image
+            </button>
+            <button class="btn" id="remove-filter">remove-filter</button>
+        </div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
